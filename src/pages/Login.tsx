@@ -21,6 +21,7 @@ import axios from 'axios';
 import { FormEvent, useRef, useState } from 'react';
 
 import { FaUser } from 'react-icons/fa';
+
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -54,7 +55,7 @@ const Login = () => {
 
   return (
     <Box
-      backgroundImage="url('/public/login-image.jpg')"
+      backgroundImage={'url(/login-image.jpg)'}
       backgroundAttachment={'fixed'}
       backgroundSize={'cover'}
       backgroundPosition="center"
@@ -80,7 +81,7 @@ const Login = () => {
                 <Text>الدخول</Text>
                 <Text>أهلا وسهلا</Text>
               </VStack>
-              <Image src="/public/edugate.svg" width={'60%'} />
+              <Image src={'/edugate.svg'} width={'60%'} />
             </HStack>
           </CardHeader>
           <form onSubmit={handleSubmit}>

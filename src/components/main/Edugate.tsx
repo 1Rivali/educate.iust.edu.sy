@@ -1,5 +1,4 @@
 import { VStack, Image, Text } from '@chakra-ui/react';
-import edugate from '../../../public/edugate.svg';
 const Edugate = () => {
   return (
     <VStack
@@ -8,7 +7,7 @@ const Edugate = () => {
       paddingX={'15px'}
       position={'relative'}
     >
-      <Image src={edugate} width={'50%'} verticalAlign={'middle'} />
+      <Image src={'/edugate.svg'} width={'50%'} verticalAlign={'middle'} />
       <Text fontSize={'lg'} marginTop={'30px'}>
         البوابة الالكترونية (Edugate) هي منظومة تتكون من عدة خدمات لزوار البوابة
         والطلاب والمدرسين. هدفها تسهيل التعامل مع النظام الأكاديمي للجامعة
