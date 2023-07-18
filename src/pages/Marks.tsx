@@ -18,7 +18,6 @@ import {
   SelectGroup,
   SelectTrigger,
   SelectValue,
-  SelectLabel,
 } from '../../@/components/ui/select';
 import { useEffect, useState } from 'react';
 import apiClient from '../services/api-client';
@@ -30,7 +29,7 @@ export interface User {
   faculty: string;
   specialization: string;
   status: string;
-  supervisor: any;
+  supervisor: string | undefined;
   planProgress: number;
   level: number;
   balance: number;
@@ -102,7 +101,7 @@ const Marks = () => {
         setSubjects(res.data.subjects);
         console.log('type', subjects);
       })
-      .catch((e) => {
+      .catch(() => {
         return;
       });
   };
