@@ -25,8 +25,8 @@ import {
   FaTwitter,
   FaFacebook,
 } from 'react-icons/fa';
-import chart1 from '../assets/chart-1.svg';
-import chart2 from '../assets/chart-2.svg';
+import chart1 from '../../public/chart-1.svg';
+import chart2 from '../../public/chart-2.svg';
 import { Link } from 'react-router-dom';
 import ProfileAppBar from '../components/ProfileAppBar';
 import ProfileNavigator from '../components/ProfileNavigator';
@@ -97,7 +97,7 @@ const Profile = () => {
             boxShadow={
               '0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26)'
             }
-            backgroundImage={'url(/src/assets/user-card-header.png)'}
+            backgroundImage={'url(/public/user-card-header.png)'}
             backgroundRepeat={'no-repeat'}
             backgroundSize={'cover'}
             pt={2}

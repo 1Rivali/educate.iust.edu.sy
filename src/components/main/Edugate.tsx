@@ -1,5 +1,5 @@
 import { VStack, Image, Text } from '@chakra-ui/react';
-import edugate from '../../assets/edugate.svg';
+import edugate from '../../../public/edugate.svg';
 const Edugate = () => {
   return (
     <VStack

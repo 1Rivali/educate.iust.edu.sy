@@ -1,4 +1,4 @@
-import logo from '../assets/logo2.png';
+import logo from '../../public/logo2.png';
 
 import { HStack, Image, Text } from '@chakra-ui/react';
 const ProfileAppBar = () => {

@@ -1,7 +1,7 @@
 import { HStack, Image, Text, Center } from '@chakra-ui/react';
-import logo2 from '../../assets/logo2.png';
-import lock from '../../assets/lock.jpg';
-import banner2 from '../../assets/bann2.jpg';
+import logo2 from '../../../public/logo2.png';
+import lock from '../../../public/lock.jpg';
+import banner2 from '../../../public/bann2.jpg';
 import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (

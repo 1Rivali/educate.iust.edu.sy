@@ -54,7 +54,7 @@ const Login = () => {
 
   return (
     <Box
-      backgroundImage="url('/src/assets/login-image.jpg')"
+      backgroundImage="url('/public/login-image.jpg')"
       backgroundAttachment={'fixed'}
       backgroundSize={'cover'}
       backgroundPosition="center"
@@ -80,7 +80,7 @@ const Login = () => {
                 <Text>الدخول</Text>
                 <Text>أهلا وسهلا</Text>
               </VStack>
-              <Image src="/src/assets/edugate.svg" width={'60%'} />
+              <Image src="/public/edugate.svg" width={'60%'} />
             </HStack>
           </CardHeader>
           <form onSubmit={handleSubmit}>
