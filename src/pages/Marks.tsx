@@ -21,6 +21,9 @@ import {
 } from '../../@/components/ui/select';
 import { useEffect, useState } from 'react';
 import apiClient from '../services/api-client';
+import MarksMobileGrid from '../components/MarksMobileGrid';
+import MarksDesktopGrid from '../components/MarksDesktopGrid';
+import ProfileFooter from '../components/ProfileFooter';
 export interface User {
   id: number;
   name: string;
@@ -99,7 +102,6 @@ const Marks = () => {
       .get<Semester>(`/subjects/semester/${value}`)
       .then((res) => {
         setSubjects(res.data.subjects);
-        console.log('type', subjects);
       })
       .catch(() => {
         return;
@@ -109,6 +111,7 @@ const Marks = () => {
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem('user')));
   }, []);
+
   return (
     <Box sx={{ direction: 'rtl' }} color={'white'}>
       <ProfileAppBar />
@@ -158,96 +161,14 @@ const Marks = () => {
               <Text>لا يوجد بيانات</Text>
             </Center>
           ) : (
-            <SimpleGrid>
-              {subjects.map((subject) => (
-                <Card
-                  key={subject.id}
-                  bgColor={subject.id % 2 != 0 ? 'blackAlpha.200' : 'white'}
-                  borderRadius={0}
-                >
-                  <CardBody>
-                    <HStack justifyContent={'space-between'} mb={'20px'}>
-                      <Text>رمز المقرر</Text>
-                      <Text
-                        fontSize={'14px'}
-                        textAlign={'center'}
-                        width={'50%'}
-                      >
-                        {subject.code}
-                      </Text>
-                    </HStack>
-                    <HStack justifyContent={'space-between'} mb={'20px'}>
-                      <Text>اسم المقرر</Text>
-                      <Text
-                        fontSize={'14px'}
-                        textAlign={'center'}
-                        width={'50%'}
-                      >
-                        {subject.name}
-                      </Text>
-                    </HStack>
-                    <HStack justifyContent={'space-between'} mb={'20px'}>
-                      <Text>النشاط</Text>
-                      <Text
-                        fontSize={'14px'}
-                        textAlign={'center'}
-                        width={'50%'}
-                      >
-                        {subject.activity}
-                      </Text>
-                    </HStack>
-                    <HStack justifyContent={'space-between'} mb={'20px'}>
-                      <Text>الحالة</Text>
-                      <Text
-                        fontSize={'14px'}
-                        textAlign={'center'}
-                        width={'50%'}
-                      >
-                        {subject.status}
-                      </Text>
-                    </HStack>
-                    <HStack justifyContent={'space-between'} mb={'20px'}>
-                      <Text>العلامة</Text>
-                      <Text
-                        fontSize={'14px'}
-                        textAlign={'center'}
-                        width={'50%'}
-                        fontWeight={'bold'}
-                        color={subject.digit_mark != '0' ? 'green' : 'red'}
-                      >
-                        {subject.digit_mark}
-                      </Text>
-                    </HStack>
-                    <HStack justifyContent={'space-between'} mb={'20px'}>
-                      <Text>العلامة بالاحرف</Text>
-                      <Text
-                        fontSize={'14px'}
-                        textAlign={'center'}
-                        width={'50%'}
-                        fontWeight={'bold'}
-                      >
-                        {subject.mark}
-                      </Text>
-                    </HStack>
-                    <HStack justifyContent={'space-between'} mb={'20px'}>
-                      <Text>ناجح؟</Text>
-                      <Text
-                        textAlign={'center'}
-                        width={'50%'}
-                        fontSize={'14px'}
-                        color={subject.is_passed == true ? 'green' : 'red'}
-                        fontWeight={'bold'}
-                      >
-                        {subject.is_passed == true ? 'ناجح' : 'لا'}
-                      </Text>
-                    </HStack>
-                  </CardBody>
-                </Card>
-              ))}
-            </SimpleGrid>
+            <>
+              <MarksMobileGrid subjects={subjects} />
+              <MarksDesktopGrid subjects={subjects} />
+            </>
           )}
         </CardBody>
       </Card>
+      <ProfileFooter />
     </Box>
   );
 };

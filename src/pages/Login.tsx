@@ -64,8 +64,15 @@ const Login = () => {
       minHeight={'100vh'}
     >
       {isError ? (
-        <Center>
-          <Alert status="error" width={'50%'}>
+        <Center
+          bottom={'auto'}
+          top={'0'}
+          left={'auto'}
+          right={'0'}
+          position={'absolute'}
+          mt={'20px'}
+        >
+          <Alert borderRadius={'10px'} status="error" width={'100%'}>
             <AlertIcon />
             اسم المستخدم او كلمة المرور غير صحيحة
           </Alert>
@@ -74,14 +81,26 @@ const Login = () => {
         ''
       )}
       <Center>
-        <Card mt={0} width={'70%'}>
+        <Card
+          mt={0}
+          width={{ base: '70%', sm: '70%', md: '40%', lg: '40%', xl: '40%' }}
+        >
           <CardHeader backgroundColor={'#607D8B'} color={'white'}>
-            <HStack>
+            <HStack justifyContent={'space-between'} paddingX={'20px'}>
               <VStack>
                 <Text>الدخول</Text>
                 <Text>أهلا وسهلا</Text>
               </VStack>
-              <Image src={'/edugate.svg'} width={'60%'} />
+              <Image
+                src={'/edugate.svg'}
+                width={{
+                  base: '60%',
+                  sm: '60%',
+                  md: '40%',
+                  lg: '40%',
+                  xl: '40%',
+                }}
+              />
             </HStack>
           </CardHeader>
           <form onSubmit={handleSubmit}>

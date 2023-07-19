@@ -5,13 +5,20 @@ import {
   VStack,
   Text,
   HStack,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import { FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 const Footer = () => {
   return (
     <>
       <Box backgroundColor={'#005072'} color={'white'} padding={'3em 0'}>
-        <VStack paddingX={'15px'} sx={{ direction: 'ltr' }}>
+        {/* <VStack paddingX={'15px'} >
+          
+        </VStack> */}
+        <SimpleGrid
+          columns={{ base: 1, sm: 1, md: 3, lg: 3, xl: 3 }}
+          paddingX={'10%'}
+        >
           <Container position={'relative'} paddingX={'15px'}>
             <Heading
               variant={'h3'}
@@ -60,7 +67,7 @@ const Footer = () => {
               from us.
             </Text>
           </Container>
-        </VStack>
+        </SimpleGrid>
       </Box>
       <Text
         color={'white'}

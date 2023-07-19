@@ -4,15 +4,44 @@ const NavBar = () => {
   return (
     <>
       <HStack
-        padding={'16px'}
+        padding={{
+          base: '16px',
+          sm: '16px',
+          md: '32px',
+          lg: '32px',
+          xl: '32px',
+        }}
         justifyContent={'space-between'}
         marginBottom={'30px'}
       >
-        <Image src={'/logo2.png'} boxSize={'40px'} />
+        <Image
+          src={'/logo2.png'}
+          boxSize={{
+            base: '40px',
+            sm: '40px',
+            md: '75px',
+            lg: '75px',
+            xl: '75px',
+          }}
+        />
         <Link to={'/login'}>
           <HStack>
-            <Text fontSize="l">دخول</Text>
-            <Image src={'/lock.jpg'} boxSize={'32px'} />
+            <Text
+              fontSize={{ sm: 'lg', md: 'xl', lg: 'xl', xl: 'xl' }}
+              fontWeight={'bold'}
+            >
+              دخول
+            </Text>
+            <Image
+              src={'/lock.jpg'}
+              boxSize={{
+                base: '32px',
+                sm: '32px',
+                md: '55px',
+                lg: '55px',
+                xl: '55px',
+              }}
+            />
           </HStack>
         </Link>
       </HStack>
