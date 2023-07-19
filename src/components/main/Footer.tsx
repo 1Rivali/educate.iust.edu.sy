@@ -2,7 +2,6 @@ import {
   Box,
   Container,
   Heading,
-  VStack,
   Text,
   HStack,
   SimpleGrid,

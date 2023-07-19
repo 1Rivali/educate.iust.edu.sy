@@ -1,4 +1,4 @@
-import { HStack, Text, VStack, Link, SimpleGrid } from '@chakra-ui/react';
+import { HStack, Text, Link, SimpleGrid } from '@chakra-ui/react';
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
