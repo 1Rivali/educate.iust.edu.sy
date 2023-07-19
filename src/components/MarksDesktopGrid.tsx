@@ -1,8 +1,5 @@
 import {
-  HStack,
-  SimpleGrid,
   TableContainer,
-  Text,
   Table,
   Thead,
   Tr,

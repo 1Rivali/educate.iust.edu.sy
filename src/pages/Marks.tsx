@@ -4,8 +4,6 @@ import {
   CardBody,
   CardHeader,
   Center,
-  HStack,
-  SimpleGrid,
   Text,
 } from '@chakra-ui/react';
 import ProfileAppBar from '../components/ProfileAppBar';

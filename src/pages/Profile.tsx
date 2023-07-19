@@ -15,15 +15,10 @@ import { useEffect, useState } from 'react';
 import {
   FaEnvelope,
   FaEdit,
-  FaTable,
   FaPlusCircle,
   FaChartBar,
-  FaFile,
   FaDollarSign,
   FaUsers,
-  FaYoutube,
-  FaTwitter,
-  FaFacebook,
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import ProfileAppBar from '../components/ProfileAppBar';
