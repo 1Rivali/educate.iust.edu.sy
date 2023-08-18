@@ -181,6 +181,10 @@ const Profile = () => {
                 <Text>الحالة :</Text>
                 <Text>{user.status}</Text>
               </HStack>
+              <HStack>
+                <Text>المستوى :</Text>
+                <Text>ترفع للسنة الثالثة</Text>
+              </HStack>
             </CardBody>
           </Card>
 

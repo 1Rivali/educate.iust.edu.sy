@@ -87,11 +87,11 @@ const MarksDesktopGrid = ({ subjects }: Props) => {
           </Tr>
         </Thead>
         <Tbody>
-          {subjects.map((subject) => (
+          {subjects.map((subject, index) => (
             <Tr
               key={subject.id}
               border={'1px solid #d8d8d8'}
-              bgColor={subject.id % 2 != 0 ? 'blackAlpha.200' : 'white'}
+              bgColor={index % 2 != 0 ? 'blackAlpha.200' : 'white'}
             >
               <Td
                 border={'1px solid #d8d8d8'}

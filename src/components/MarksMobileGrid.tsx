@@ -8,10 +8,10 @@ const MarksMobileGrid = ({ subjects }: Props) => {
     <SimpleGrid
       display={{ base: 'grid', sm: 'grid', md: 'none', lg: 'none', xl: 'none' }}
     >
-      {subjects.map((subject) => (
+      {subjects.map((subject, index) => (
         <Card
           key={subject.id}
-          bgColor={subject.id % 2 != 0 ? 'blackAlpha.200' : 'white'}
+          bgColor={index % 2 != 0 ? 'blackAlpha.200' : 'white'}
           borderRadius={0}
         >
           <CardBody>
