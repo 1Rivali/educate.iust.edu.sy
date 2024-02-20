@@ -36,7 +36,7 @@ const Login = () => {
     if (usernameRef.current && passwordRef.current) {
       setLoading(true);
       axios
-        .post('https://kind-puce-cape-buffalo-gear.cyclic.app/students/login', {
+        .post('https://kind-puce-cape-buffalo-gear.cyclic.app', {
           username: usernameRef.current.value,
           password: passwordRef.current.value,
         })
