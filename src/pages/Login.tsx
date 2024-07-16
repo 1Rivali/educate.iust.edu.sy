@@ -36,7 +36,7 @@ const Login = () => {
     if (usernameRef.current && passwordRef.current) {
       setLoading(true);
       axios
-        .post('https://iust-edu-qvod6eodk-1rivalis-projects.vercel.app/students/login', {
+        .post('https://iust-edu-sy.vercel.app/students/login', {
           username: usernameRef.current.value,
           password: passwordRef.current.value,
         })
